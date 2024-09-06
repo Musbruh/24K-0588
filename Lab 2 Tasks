@@ -1,0 +1,113 @@
+1)	Find if the number is multiple of 5.
+
+INPUT number
+IF number MOD 5 = 0 THEN
+    OUTPUT "The number is a multiple of 5."
+ELSE
+    OUTPUT "The number is not a multiple of 5."
+END IF
+
+2)	Check if a character is uppercase or lowercase.
+
+INPUT character
+IF character >= 'A' AND character <= 'Z' THEN
+    OUTPUT "Character is uppercase."
+ELSE IF character >= 'a' AND character <= 'z' THEN
+    OUTPUT "Character is lowercase."
+ELSE
+    OUTPUT "Character is not a letter."
+END IF
+
+3)	Create a small calculator which only does ‘+’ or ‘*‘Operations. (Hint: Take three variable inputs with one being used for the operator)
+
+INPUT number1
+INPUT number2
+INPUT operator
+IF operator = "+" THEN
+    result = number1 + number2
+ELSE IF operator = "*" THEN
+    result = number1 * number2
+ELSE
+    OUTPUT "Invalid operator."
+    STOP
+END IF
+OUTPUT result
+
+4)	Check whether a given number is positive, negative, or zero.
+
+INPUT number
+IF number > 0 THEN
+    OUTPUT "The number is positive."
+ELSE IF number < 0 THEN
+    OUTPUT "The number is negative."
+ELSE
+    OUTPUT "The number is zero."
+END IF
+
+5)	Determine if a person is a teenager (between 13 and 19 years old).
+
+INPUT age
+IF age >= 13 AND age <= 19 THEN
+    OUTPUT "Person is a teenager."
+ELSE
+    OUTPUT "Person is not a teenager."
+END IF
+
+6)	Implement an algorithm to determine if a given year is a leap year. A leap year is divisible by 4, but not divisible by 100, except if it is also divisible by 400.
+INPUT year
+IF year MOD 400 = 0 THEN
+    OUTPUT year + " is a leap year."
+ELSE IF year MOD 100 = 0 THEN
+    OUTPUT year + " is not a leap year."
+ELSE IF year MOD 4 = 0 THEN
+    OUTPUT year + " is a leap year."
+ELSE
+    OUTPUT year + " is not a leap year."
+
+7)	Implement an algorithm to count the number of occurrences of each character in a given string.
+INPUT string
+FOR i FROM 0 TO 255
+    character_count[i] = 0
+END FOR
+
+FOR i FROM 0 TO LENGTH OF string - 1
+    character = string[i]
+    index = ASCII value of character
+    character_count[index] = character_count[index] + 1
+END FOR
+FOR i FROM 0 TO 255
+    IF character_count[i] > 0 THEN
+        OUTPUT CHARACTER WITH ASCII value i + ": " + character_count[i]
+    END IF
+END FOR
+8)	Write an algorithm to calculate x raised to the power y (i.e., x y ) without using built-in power functions.
+
+INPUT x, y
+result = 1
+FOR i FROM 1 TO y
+    result = result * x
+END FOR
+OUTPUT result
+
+9)	Calculate the area of a circle given its radius r.
+
+INPUT r
+pi = 3.14159
+area = pi * r * r
+OUTPUT area
+
+10)	Find the median of three given numbers.
+
+INPUT a, b, c
+IF a > b THEN
+    SWAP a AND b
+END IF
+IF a > c THEN
+    SWAP a AND c
+END IF
+
+IF b > c THEN
+    SWAP b AND c
+END IF
+median = b
+OUTPUT median
