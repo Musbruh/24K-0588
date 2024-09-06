@@ -1,0 +1,119 @@
+// Question 1
+
+The entered value is exceeding the range of a 32 bit signed integer and resulting in an overflow which causes it to wrap around to a negative value and show the wrong output.
+
+// Question 2
+
+#include <stdio.h>
+main()
+{
+    int num1, num2, num3;
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
+    printf("Enter the third number: ");
+    scanf("%d", &num3);
+
+    int largest = num1;
+
+    if (num2 > largest)
+    {
+        largest = num2;
+    }
+
+    if (num3 > largest)
+    {
+        largest = num3;
+    }
+
+    printf("The largest number is: %d", largest);
+}
+
+// Question 3
+
+#include <stdio.h>
+main() {
+    float amount_local;
+    float conversion_rate;
+    float amount_foreign;
+
+    printf("Enter the amount in your local currency: ");
+    scanf("%f", &amount_local);
+
+    printf("Enter the conversion rate to the foreign currency: ");
+    scanf("%f", &conversion_rate);
+
+    amount_foreign = amount_local * conversion_rate;
+
+    printf("Equivalent amount in foreign currency: %f", amount_foreign);
+}
+
+
+// Question 4
+
+#include <cstdio>
+
+main() {
+    int number;
+
+    printf("Enter a number: ");
+    scanf("%d", &number);
+
+    if (number % 2 == 0) {
+        printf("The number is even.");
+    } else {
+        printf("The number is odd.");
+    }
+}
+
+
+// Question 5
+
+#include <cstdio>
+
+main() {
+    float original_price;
+    float discount_rate;
+    float final_price;
+
+    printf("Enter the original price (Rs.100 - Rs.50,000): ");
+    scanf("%f", &original_price);
+
+    printf("Enter the discount rate (5%% - 30%%): ");
+    scanf("%f", &discount_rate);
+
+    if (original_price < 100) {
+        printf("Error: Original price must be at least Rs.100.");
+    } else if (original_price > 50000) {
+        printf("Error: Original price must not exceed Rs.50,000.");
+    } else if (discount_rate < 5) {
+        printf("Error: Discount rate must be at least 5%%.");
+    } else if (discount_rate > 30) {
+        printf("Error: Discount rate must not exceed 30%%.");
+    } else {
+        final_price = original_price * (1 - discount_rate / 100);
+        printf("Final price after discount: Rs.%f", final_price);
+    }
+}
+
+
+// Question 6
+
+#include <cstdio>
+
+main() {
+    float radius;
+    float height;
+    float volume;
+    const float PI = 3.14159;
+
+    printf("Enter the radius of the cylinder: ");
+    scanf("%f", &radius);
+
+    printf("Enter the height of the cylinder: ");
+    scanf("%f", &height);
+
+    volume = PI * radius * radius * height;
+    printf("Volume of the cylinder: %f", volume);
+}
