@@ -1,0 +1,191 @@
+/* Universal Selector */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Updated Header Styles */
+.top {
+  display: flex;
+  justify-content: space-between; /* Spread out menu and account-cart */
+  align-items: center;
+  background-color: black; /* Black background */
+  color: white; /* White text color */
+  padding: 15px 20px; /* Add padding for space */
+  position: fixed; /* Fix it to the top of the page */
+  top: 0;
+  font-family: 'Raleway', sans-serif;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Ensure it stays on top of other content */
+}
+
+/* Styling for the menu-links */
+.top .menu-links ul {
+  display: flex;
+  list-style: none; /* Remove list bullets */
+  margin: 0;
+  padding: 0;
+}
+
+.top .menu-links li {
+  margin: 0 15px; /* Space between each menu item */
+}
+
+.top .menu-links a {
+  text-decoration: none;
+  color: white; /* White text for links */
+  font-size: 16px; /* Font size for the menu */
+  padding: 5px 10px;
+  display: inline-block; /* Make the link a block element for padding */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for menu links */
+.top .menu-links a:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Styling for the account-cart */
+.top .account-cart {
+  display: flex;
+  align-items: center;
+}
+
+.top .account-cart a {
+  text-decoration: none;
+  color: white; /* White text for icons */
+  margin: 0 15px; /* Space between the icons */
+  font-size: 18px; /* Icon font size */
+}
+
+.top .account-cart .cart-icon,
+.top .account-cart .account-icon {
+  font-size: 20px; /* Adjust the size of the icons */
+}
+
+
+.logo {
+  height: 50px;
+}
+
+/* Main Content */
+main {
+  max-width: 800px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Main Heading */
+h1 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 36px;
+  color: #B70000;
+  margin-bottom: 20px;
+}
+
+/* Discount Grid */
+.discount-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Card Styling */
+.card {
+  background-color: #121212;
+  border: 3px solid #B70000;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(236, 164, 0, 0.5);
+}
+
+/* Card Images */
+.card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: contain;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Card Details */
+.card-details h2 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 20px;
+  color: #ECA400;
+  margin-bottom: 10px;
+}
+
+.card-details p {
+  font-family: 'Trykker', serif;
+  font-size: 14px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+/* Card Buttons */
+.card button {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: transparent;
+  color: #ECA400;
+  padding: 10px 20px;
+  border: 2px solid #ECA400;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.card button:hover {
+  background-color: #ECA400;
+  color: black;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .discount-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  header {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
